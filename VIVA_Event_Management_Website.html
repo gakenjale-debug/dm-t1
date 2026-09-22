@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIVA Events | Make Every Moment Count</title>
+<meta name="description" content="VIVA Events — birthday parties, event anchoring, decorations and unforgettable celebrations.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root{
+  --ink:#20201d; --cream:#f8f4ed; --paper:#fffdf9; --accent:#e85d4a;
+  --yellow:#f5c85b; --sage:#71806a; --muted:#77756e; --line:#ded8cd;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink);line-height:1.5}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.nav{position:fixed;z-index:50;top:0;left:0;right:0;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(248,244,237,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(32,32,29,.07)}
+.logo{font-family:'Playfair Display';font-size:25px;font-weight:800;letter-spacing:-1px}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:28px;font-size:14px;font-weight:600}
+.navlinks a:hover{color:var(--accent)}
+.navbtn{background:var(--ink);color:white;padding:10px 17px;border-radius:30px;font-size:13px}
+.hero{min-height:100vh;padding:135px 6% 70px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;max-width:1400px;margin:auto}
+.kicker{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);padding:8px 13px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.dot{width:8px;height:8px;background:var(--accent);border-radius:50%}
+h1{font-family:'Playfair Display';font-size:clamp(58px,7vw,100px);line-height:.91;letter-spacing:-.055em;margin:25px 0}
+h1 em{color:var(--accent);font-style:normal}
+.hero p{max-width:530px;color:#66635c;font-size:18px}
+.ctas{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:14px 22px;border-radius:30px;font-weight:700;font-size:14px;border:1px solid var(--ink);display:inline-block}
+.btn.primary{background:var(--ink);color:#fff}
+.btn.secondary{background:transparent}
+.hero-visual{position:relative;height:590px}
+.photo{position:absolute;overflow:hidden;border-radius:28px;box-shadow:0 25px 60px rgba(30,25,18,.15)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo.big{width:74%;height:82%;right:0;top:3%}
+.photo.small{width:47%;height:42%;left:0;bottom:0;border:10px solid var(--cream)}
+.sticker{position:absolute;right:3%;bottom:3%;background:var(--yellow);width:110px;height:110px;border-radius:50%;display:grid;place-items:center;text-align:center;font-weight:800;font-size:13px;transform:rotate(8deg);z-index:2}
+.marquee{background:var(--ink);color:#fff;padding:13px 0;overflow:hidden;white-space:nowrap;font-weight:700;letter-spacing:.04em}
+.marquee-track{display:inline-block;animation:scroll 22s linear infinite}
+.marquee span{margin:0 28px;color:var(--yellow)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-30%)}}
+section{padding:100px 6%;max-width:1400px;margin:auto}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:45px}
+.eyebrow{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.13em}
+h2{font-family:'Playfair Display';font-size:clamp(42px,5vw,68px);line-height:.95;letter-spacing:-.045em;margin-top:9px}
+.section-head p{max-width:400px;color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:27px;min-height:260px;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 45px rgba(30,25,18,.09)}
+.icon{font-size:32px;margin-bottom:45px}
+.card h3{font-family:'Playfair Display';font-size:26px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14px}
+.card a{display:inline-block;margin-top:18px;font-size:13px;font-weight:800;color:var(--accent)}
+.split{background:#20201d;color:#fff;max-width:none;padding-left:6%;padding-right:6%;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.split h2{color:#fff}
+.split p{color:#c8c5bd;margin:20px 0;max-width:500px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0}
+.check{padding:13px 15px;border:1px solid #44423e;border-radius:14px;font-size:13px}
+.check b{color:var(--yellow);margin-right:7px}
+.gallery{display:grid;grid-template-columns:1.15fr .85fr .85fr;grid-template-rows:260px 260px;gap:14px}
+.g{border-radius:22px;overflow:hidden;position:relative}
+.g img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.g:hover img{transform:scale(1.05)}
+.g:nth-child(1){grid-row:span 2}
+.overlay{position:absolute;left:16px;bottom:15px;background:rgba(255,253,249,.9);padding:8px 12px;border-radius:20px;font-size:12px;font-weight:800}
+.packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.package{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:30px}
+.package.featured{background:var(--yellow);border-color:var(--yellow);transform:translateY(-12px)}
+.price{font-family:'Playfair Display';font-size:38px;margin:20px 0 8px}
+.package ul{list-style:none;margin:20px 0 25px}
+.package li{padding:8px 0;border-bottom:1px dashed #ccc;font-size:14px}
+.package li::before{content:'✓ ';font-weight:800}
+.testimonial{background:#e9e1d3;border-radius:32px;padding:65px;display:grid;grid-template-columns:1fr 2fr;gap:50px;align-items:center}
+.quote{font-family:'Playfair Display';font-size:clamp(27px,3vw,44px);line-height:1.08}
+.quote small{font-family:'DM Sans';display:block;font-size:13px;margin-top:25px;color:#6c685f}
+.contact{background:var(--accent);color:white;border-radius:32px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact h2{color:white}
+.form{display:grid;gap:12px}
+input,select,textarea{width:100%;padding:15px 16px;border:0;border-radius:12px;background:rgba(255,255,255,.95);font:inherit}
+textarea{min-height:110px;resize:vertical}
+.form button{border:0;background:var(--ink);color:white;padding:15px;border-radius:30px;font-weight:800;cursor:pointer}
+footer{padding:35px 6%;display:flex;justify-content:space-between;gap:20px;color:#77736a;font-size:13px;border-top:1px solid var(--line)}
+.social{display:flex;gap:18px}
+@media(max-width:900px){
+ .hero,.split,.contact{grid-template-columns:1fr}
+ .hero{padding-top:115px}
+ .hero-visual{height:500px}
+ .services{grid-template-columns:1fr 1fr}
+ .packages{grid-template-columns:1fr}
+ .package.featured{transform:none}
+ .testimonial{grid-template-columns:1fr;padding:40px}
+ .gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px 220px}
+ .g:nth-child(1){grid-row:span 1}
+ .navlinks{display:none}
+}
+@media(max-width:560px){
+ section{padding:70px 5%}
+ .hero{padding-left:5%;padding-right:5%}
+ h1{font-size:58px}
+ .hero-visual{height:390px}
+ .services{grid-template-columns:1fr}
+ .gallery{grid-template-columns:1fr;grid-template-rows:250px 250px 250px 250px 250px}
+ .split{padding-left:5%;padding-right:5%}
+ .contact{padding:35px}
+ footer{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#" class="logo">VIVA<span>.</span></a>
+  <div class="navlinks">
+    <a href="#services">Services</a>
+    <a href="#work">Our Work</a>
+    <a href="#packages">Packages</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="navbtn" href="#contact">Plan an Event →</a>
+</nav>
+
+<header class="hero">
+  <div>
+    <div class="kicker"><span class="dot"></span> Events worth remembering</div>
+    <h1>We plan.<br>We style.<br><em>You celebrate.</em></h1>
+    <p>From intimate birthdays to high-energy college events, VIVA turns your ideas into beautifully planned moments — without the planning headache.</p>
+    <div class="ctas">
+      <a href="#contact" class="btn primary">Start Planning →</a>
+      <a href="#services" class="btn secondary">Explore Services</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="photo big"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1000&q=85" alt="Elegant event setup"></div>
+    <div class="photo small"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=85" alt="Birthday celebration"></div>
+    <div class="sticker">GOOD<br>VIBES<br>ONLY ✦</div>
+  </div>
+</header>
+
+<div class="marquee"><div class="marquee-track">
+  BIRTHDAYS <span>✦</span> ANCHORING <span>✦</span> DECOR <span>✦</span> COLLEGE EVENTS <span>✦</span> CORPORATE EVENTS <span>✦</span> COMPLETE EVENT MANAGEMENT <span>✦</span>
+  BIRTHDAYS <span>✦</span> ANCHORING <span>✦</span> DECOR <span>✦</span>
+</div></div>
+
+<section id="services">
+  <div class="section-head">
+    <div><div class="eyebrow">What we do</div><h2>Your event,<br>your vibe.</h2></div>
+    <p>Pick one service or let us handle the whole thing. We bring the people, ideas, details and energy together.</p>
+  </div>
+  <div class="services">
+    <div class="card"><div class="icon">🎂</div><h3>Birthday Parties</h3><p>Themed décor, games, cake moments and all the little details that make the day feel yours.</p><a href="#contact">Plan a birthday →</a></div>
+    <div class="card"><div class="icon">🎤</div><h3>Anchoring</h3><p>Confident hosting, crowd interaction and a smooth flow that keeps your audience involved.</p><a href="#contact">Book an anchor →</a></div>
+    <div class="card"><div class="icon">🌸</div><h3>Event Decor</h3><p>From dreamy backdrops to statement entrances — we style spaces around your theme and budget.</p><a href="#contact">Style my event →</a></div>
+    <div class="card"><div class="icon">✨</div><h3>Full Planning</h3><p>Concept to execution: vendors, schedule, décor, hosting and on-ground coordination.</p><a href="#contact">Build my event →</a></div>
+  </div>
+</section>
+
+<section class="split">
+  <div>
+    <div class="eyebrow">Why VIVA?</div>
+    <h2>Less stress.<br>More sparkle.</h2>
+    <p>You tell us the occasion and the feeling you want. We take care of the rest — with clear communication, creative ideas and a plan that actually works.</p>
+    <div class="checks">
+      <div class="check"><b>01</b> Personalised concepts</div>
+      <div class="check"><b>02</b> Budget-friendly options</div>
+      <div class="check"><b>03</b> Reliable execution</div>
+      <div class="check"><b>04</b> One point of contact</div>
+    </div>
+    <a class="btn" style="border-color:#fff;color:#fff" href="#contact">Tell us your idea →</a>
+  </div>
+  <div>
+    <div style="border-radius:28px;overflow:hidden;height:470px"><img style="width:100%;height:100%;object-fit:cover" src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=85" alt="Celebration with balloons"></div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="section-head">
+    <div><div class="eyebrow">A little inspiration</div><h2>Moments we<br>love creating.</h2></div>
+    <p>Different occasions, different personalities — one goal: make people say, “That was SO us.”</p>
+  </div>
+  <div class="gallery">
+    <div class="g"><img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1000&q=85"><div class="overlay">Birthday setup</div></div>
+    <div class="g"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=85"><div class="overlay">Celebration</div></div>
+    <div class="g"><img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=800&q=85"><div class="overlay">Table styling</div></div>
+    <div class="g"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=85"><div class="overlay">Live event</div></div>
+    <div class="g"><img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=85"><div class="overlay">Stage & decor</div></div>
+  </div>
+</section>
+
+<section id="packages">
+  <div class="section-head">
+    <div><div class="eyebrow">Simple packages</div><h2>Choose your<br>kind of celebration.</h2></div>
+    <p>Use these as starting points. Every package can be customised to your guest count, theme and budget.</p>
+  </div>
+  <div class="packages">
+    <div class="package"><div class="eyebrow">01 · Essential</div><h3>Little Celebration</h3><div class="price">₹8,999+</div><p>For intimate birthdays and small gatherings.</p><ul><li>Basic theme décor</li><li>Balloon + backdrop setup</li><li>Event coordination</li><li>Setup & clean-up</li></ul><a class="btn" href="#contact">Enquire →</a></div>
+    <div class="package featured"><div class="eyebrow" style="color:#544a25">02 · Popular</div><h3>Big Moment</h3><div class="price">₹18,999+</div><p>For celebrations that deserve a little extra.</p><ul><li>Premium themed décor</li><li>Games & activity planning</li><li>Professional anchoring</li><li>Photography coordination</li></ul><a class="btn primary" href="#contact">Let's plan →</a></div>
+    <div class="package"><div class="eyebrow">03 · Complete</div><h3>Full VIVA</h3><div class="price">Custom</div><p>End-to-end event management.</p><ul><li>Concept + theme development</li><li>Vendor management</li><li>Décor & stage setup</li><li>Anchoring + on-ground team</li></ul><a class="btn" href="#contact">Get a quote →</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="testimonial">
+    <div><div class="eyebrow">The VIVA feeling</div><h2>“Make it<br>memorable.”</h2></div>
+    <div class="quote">“The best events don't just look good — they feel like you. That's what we build into every celebration, from the first idea to the last photo.”<small>— Team VIVA Events · Pune</small></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <div>
+      <div class="eyebrow" style="color:#ffe7a0">Let's make it happen</div>
+      <h2>Got an event<br>in mind?</h2>
+      <p style="margin-top:20px;color:#ffe9e4;max-width:430px">Tell us the occasion, date and vibe. We'll get back to you with ideas and a customised plan.</p>
+      <p style="margin-top:30px;font-weight:700">📞 +91 98765 43210<br>✉️ hello@vivaevents.in<br>📍 Pune, Maharashtra</p>
+    </div>
+    <form class="form" onsubmit="submitForm(event)">
+      <input required placeholder="Your name">
+      <input required type="tel" placeholder="Phone number">
+      <select required><option value="">What are you planning?</option><option>Birthday Party</option><option>Anchoring</option><option>Event Decoration</option><option>College Event</option><option>Corporate Event</option><option>Complete Event Management</option></select>
+      <input type="date">
+      <textarea placeholder="Tell us a little about your event..."></textarea>
+      <button type="submit">Send Enquiry ✦</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div><b>VIVA.</b> · Events worth remembering.</div>
+  <div class="social"><span>Instagram</span><span>WhatsApp</span><span>Facebook</span></div>
+  <div>© 2026 VIVA Events</div>
+</footer>
+
+<script>
+function submitForm(e){
+  e.preventDefault();
+  const btn=e.target.querySelector('button');
+  btn.textContent='Enquiry received ✦';
+  btn.style.background='#71806a';
+  setTimeout(()=>{btn.textContent='Send Enquiry ✦';btn.style.background='';},3000);
+}
+</script>
+</body>
+</html>
